@@ -1,0 +1,61 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Notas APP</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pico.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos_propios.css')}}">
+<style>
+    body {
+    background-image: url('https://www.fourpeaksforteachers.org/wp.content/uploads/2019/08/AdobeStock_214316329.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><strong>Brand</strong></li>
+            </ul>
+            <ul>
+                <li><a href="acerca_notas.html" role="button" class="outline">Acerca de notas</a></li>
+            </ul>
+        </nav>
+        <!-- Main -->
+        <main class="container">
+            <hgroup>
+                {# <p style="text-align: center; font-size:  40px; font-weight: bold;">Inicio de sesión </p> #}
+                {# <h2>Bienvenid@ ingresa tus credenciales</h2> #}
+            </hgroup>
+            <section class="grid">
+                <div></div>
+                <div class="form_login">
+                <form method="post" action="/login">
+                    <label for="email">Usuario: </label>
+                    <input type="email" name= "email" placeholder="mail@mail.com" required/>
+                    <label for="password">Contraseña: </label>
+                    <input type="password" name= "password" placeholder="***********" required />
+                    <fieldset>
+                        <a href="/usuario">Registrarse</a>
+                    </fieldset>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            <div></div>
+        </section>
+    </main>
+    <!-- ./ Main -->
+
+</div>
+
+</body>
+
+</html>
